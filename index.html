@@ -5,67 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khidmat Foundation</title>
 
-<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
-  
-
-
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-
   <style>
-
-        .about-logo {
-  text-align: center;
-  margin: 15px 0;
-}
-
-.about-logo img {
-  width: 150px;   /* adjust size */
-  height: auto;
-  border-radius: 50%;  /* makes circular logo */
-  box-shadow: 0px 4px 8px rgba(0,0,0,0.2); /* optional */
-}
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
+
     body {
       background-color: #f8f9fa;
       color: #333;
       line-height: 1.6;
-
     }
+
     header {
       background: #008080;
       color: white;
       padding: 20px 0;
       text-align: center;
     }
+
     header h1 {
       font-size: 2.5rem;
       margin-bottom: 5px;
     }
+
     header p {
       font-size: 1.2rem;
       font-weight: 300;
     }
+
     nav {
       background: #006666;
       padding: 10px;
       text-align: center;
     }
+
     nav a {
       color: white;
       margin: 0 15px;
       text-decoration: none;
       font-weight: 500;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     .hero {
       background: url('https://images.unsplash.com/photo-1509099836639-18ba1795216d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
       color: white;
@@ -76,40 +66,55 @@
       text-align: center;
       flex-direction: column;
     }
+
     .hero h2 {
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
+
     .hero p {
       font-size: 1.2rem;
       max-width: 700px;
     }
+
     .section {
       padding: 50px 20px;
       text-align: center;
     }
+
     .section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
       color: #008080;
     }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+
+    .about-logo {
+      text-align: center;
+      margin: 15px 0;
     }
+
+    .about-logo img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Card Styles */
     .card {
       background: white;
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       width: 300px;
+      flex: 0 0 auto; /* prevent shrinking */
       transition: transform 0.2s;
     }
+
     .card:hover {
       transform: translateY(-5px);
     }
+
     .card img {
       width: 100%;
       height: 180px;
@@ -117,7 +122,41 @@
       border-radius: 10px;
       margin-bottom: 10px;
     }
-    /* Gallery Styles */
+
+    /* Slider Styles */
+    .slider-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .cards-slider {
+      display: flex;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      gap: 20px;
+      width: 80%;
+    }
+
+    .slider-btn {
+      background: #008080;
+      border: none;
+      color: white;
+      font-size: 2rem;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .slider-btn:hover {
+      background: #006666;
+    }
+
+    /* Gallery */
     .gallery {
       display: flex;
       flex-wrap: wrap;
@@ -125,6 +164,7 @@
       margin-top: 10px;
       justify-content: center;
     }
+
     .gallery img {
       width: 80px;
       height: 80px;
@@ -133,40 +173,63 @@
       cursor: pointer;
       transition: transform 0.2s;
     }
+
     .gallery img:hover {
       transform: scale(1.1);
     }
+
+    /* Footer Flex */
     footer {
       background: #008080;
       color: white;
-      text-align: center;
-      padding: 15px;
+      padding: 15px 20px;
       margin-top: 30px;
     }
 
+    .footer-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-left a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .footer-left a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-center, .footer-right {
+      font-weight: 400;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Khidmat Foundation</h1>
-    <p>Serving Humanity with Compassion</p>
-  </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#about">About Us</a>
-    <a href="#work">Our Work</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header>
+  <h1>Khidmat Foundation</h1>
+  <p>Serving Humanity with Compassion</p>
+</header>
 
-  <section class="hero">
-    <h2>Together We Can Make a Difference</h2>
-    <p>Khidmat Foundation is dedicated to helping the poor, needy, and underprivileged sections of society with love and care.</p>
-  </section>
+<nav>
+  <a href="#">Home</a>
+  <a href="#about">About Us</a>
+  <a href="#work">Our Work</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-  <section class="section" id="about">
-    <h2>About Us</h2>
-    <div class="about-logo">
+<section class="hero">
+  <h2>Together We Can Make a Difference</h2>
+  <p>Khidmat Foundation is dedicated to helping the poor, needy, and underprivileged sections of society with love and care.</p>
+</section>
+
+<section class="section" id="about">
+  <h2>About Us</h2>
+  <div class="about-logo">
     <img src="images/logo.jpg" alt="Organization Logo">
   </div>
     <p>Khidmat Foundation, established in 2019, is a non-profit organization dedicated to serving humanity with compassion and equality. Since its inception, the foundation has been actively engaged in social welfare activities, focusing on feeding the hungry, supporting education, providing medical aid, and empowering underprivileged communities.
@@ -174,128 +237,96 @@
 Over the years, Khidmat Foundation has organized numerous social welfare programs . Along with welfare work, the foundation also celebrates important cultural and social occasions to not only to honor great leaders but also to spread their teachings of justice, equality, and social unity.
 
 Guided by the spirit of “Khidmat” (service), the foundation continues to work tirelessly to uplift marginalized communities, promote social harmony, and create opportunities for a better future. With the help of volunteers and well-wishers, Khidmat Foundation is striving to build a society where no one is left behind.</p>
-  </section>
-
-  <section class="section" id="work">
-    <h2>Our Work</h2>
-    <div class="cards">
-      <!--Eid-E-Milad and Food Distribution -->
-      <div class="card">
-	<img src="food.jpg" alt="Food">	
-        <h3>Food Distribution&Eid-E-Milad</h3>
-  <a href="food.html" rel="noopener">
-  <p>We organize food drives to feed the hungry and distribute rations to needy families.</p>
-        </a>
-      </div>
-    
-
-
-       
-
-      <!-- 75th Amrit Mahotsav -->
-    <!-- 75th Amrit Mahotsav -->
-<div class="card">
-<img src="Azadi-Ka-Amrit-Mahotsav-Logo.png" alt="75th Amrit Mahotsav">
-  <h3>75th Amrit Mahotsav</h3>
-  <a href="amrit.html" rel="noopener">
-    <p>We celebrated Azadi Ka Amrit Mahotsav with cultural programs and community events.</p>
-  </a>
-</div>
-
-
-
-
-      <!-- Medical Assistance -->
-      <div class="card">
-      <img src="clinic-tablet-hands-doctor-patient-260nw-2472677039 (1).png" alt="Medical Assistance">	
-  <h3>Healthcare Camps</h3>
-  <a href="healthcare.html" rel="noopener">
-    <p>We organized multiple healthcare camps to provide medical support to the community.</p>
-  </a>
-</div>
-
-      <!-- Shiv Jayanti -->
-      <div class="card">
-	<img src="vector-illustration-chhatrapati-shivaji-maharaj-260nw-2562374771.png" alt="Shiv Jayanti">
-        <h3>Shiv Jayanti</h3>
-          <a href="shivjayanti.html" rel="noopener">
-
-        <p>We celebrate Shiv Jayanti with cultural programs and community gatherings to honor Chhatrapati Shivaji Maharaj.</p>
-        </a>
-	
-	 
-      </div>
-
-      <!-- Ambedkar jayanti -->
-      <div class="card">
-	<img src="dr.br-ambedkar-jayanti-(1)-design-template-7a3bd93571605d7ac3cad6944689ac44_screen.jpg" alt="Ambedkar Jayanti">
-        <h3>Ambedkar Jayanti</h3>
-                  <a href="Ambedkarjayanti.html" rel="noopener">
-
-        <p>We celebrate Ambedkar jayanti with cultural programs and community gatherings.</p>
-        </a>
-	
-</div>
-
-	 
-      </div>
-     
-    </div>
-  </section>
-
-  <section class="section" id="contact">
-  <h2>Contact Us</h2>
-  <p>
-    Facebook: <a href="https://www.facebook.com/share/14GAffdVtAL/" target="_blank">
-      Visit our Facebook Page
-    </a>
-  </p>
-  <p>Phone: +91 9860171818</p>
 </section>
 
+<section class="section" id="work">
+  <h2>Our Work</h2>
 
-  <footer>
-    <p>© 2025 Khidmat Foundation | All Rights Reserved</p>
-  </footer>
-  <script>
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = document.getElementById('lightbox-img');
+  <div class="slider-container">
+    <button class="slider-btn prev">&lt;</button>
+    <div class="cards-slider">
+      <div class="card">
+        <img src="food.jpg" alt="Food">	
+        <h3>Food Distribution & Eid-E-Milad</h3>
+        <a href="food.html" rel="noopener">
+          <p>We organize food drives to feed the hungry and distribute rations to needy families.</p>
+        </a>
+      </div>
 
-  document.querySelectorAll('.lightbox-link').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      lightbox.style.display = 'flex';
-      lightboxImg.src = link.href;
-      lightboxImg.alt = link.querySelector('img').alt;
-    });
-  });
+      <div class="card">
+        <img src="Azadi-Ka-Amrit-Mahotsav-Logo.png" alt="75th Amrit Mahotsav">
+        <h3>75th Amrit Mahotsav</h3>
+        <a href="amrit.html" rel="noopener">
+          <p>We celebrated Azadi Ka Amrit Mahotsav with cultural programs and community events.</p>
+        </a>
+      </div>
 
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-    lightboxImg.alt = '';
-  });
+      <div class="card">
+        <img src="clinic-tablet-hands-doctor-patient-260nw-2472677039 (1).png" alt="Medical Assistance">	
+        <h3>Healthcare Camps</h3>
+        <a href="healthcare.html" rel="noopener">
+          <p>We organized multiple healthcare camps to provide medical support to the community.</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <img src="vector-illustration-chhatrapati-shivaji-maharaj-260nw-2562374771.png" alt="Shiv Jayanti">
+        <h3>Shiv Jayanti</h3>
+        <a href="shivjayanti.html" rel="noopener">
+          <p>We celebrate Shiv Jayanti with cultural programs and community gatherings to honor Chhatrapati Shivaji Maharaj.</p>
+        </a>
+      </div>
+
+      <div class="card">
+        <img src="dr.br-ambedkar-jayanti-(1)-design-template-7a3bd93571605d7ac3cad6944689ac44_screen.jpg" alt="Ambedkar Jayanti">
+        <h3>Ambedkar Jayanti</h3>
+        <a href="Ambedkarjayanti.html" rel="noopener">
+          <p>We celebrate Ambedkar jayanti with cultural programs and community gatherings.</p>
+        </a>
+      </div>
+    </div>
+    <button class="slider-btn next">&gt;</button>
+  </div>
+</section>
+	 
+<footer>
+  <div class="footer-flex">
+    <div class="footer-left">
+      <a href="https://www.facebook.com/share/14GAffdVtAL/" target="_blank">Visit our Page</a>
+    </div>
+    <div class="footer-center">
+      Phone: +91 9860171818
+    </div>
+    <div class="footer-right">
+      © 2025 Khidmat Foundation | All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+<!-- Slider JS -->
+<script>
+const prevBtn = document.querySelector('.slider-btn.prev');
+const nextBtn = document.querySelector('.slider-btn.next');
+const slider = document.querySelector('.cards-slider');
+
+nextBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: 320, behavior: 'smooth' });
+});
+
+prevBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: -320, behavior: 'smooth' });
+});
 </script>
-<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); justify-content:center; align-items:center;">
-  <img id="lightbox-img" src="" alt="" style="max-width:90%; max-height:90%; border-radius:8px;">
-</div>
 
-
-
+<!-- Lightbox JS -->
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const lightbox = GLightbox({
-        selector: '.glightbox',
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const lightbox = GLightbox({
+    selector: '.glightbox',
   });
-    });
-
+});
 </script>
-
-
-
-
-
 
 </body>
 </html>
