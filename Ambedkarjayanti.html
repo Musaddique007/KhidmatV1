@@ -15,9 +15,12 @@
     nav a:hover { text-decoration:underline; }
 
     .intro { max-width:800px; margin:20px auto; padding:0 20px; text-align:justify; color:#333; }
+
+    /* Carousel Styles */
     .carousel { position:relative; max-width:700px; margin:30px auto; overflow:hidden; border-radius:10px; }
     .slides { display:flex; transition:transform 0.5s ease-in-out; }
     .slides img { width:100%; flex-shrink:0; border-radius:10px; }
+
     .arrow { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:2rem; padding:10px; cursor:pointer; border-radius:50%; transition:background 0.2s; }
     .arrow:hover:not(.disabled) { background:rgba(0,0,0,0.8); }
     .prev { left:10px; }
@@ -51,7 +54,7 @@
 
 <!-- Carousel -->
 <div class="carousel">
-  <div class="slides">
+  <div class="slides" id="slides">
     <img src="images/ambedkar1.jpg" alt="Ambedkar Celebration 1">
     <img src="images/ambedkar2.jpg" alt="Ambedkar Celebration 2">
     <img src="images/ambedkar3.jpg" alt="Ambedkar Celebration 3">
@@ -70,8 +73,8 @@
 </footer>
 
 <script>
-  const slides = document.querySelector('.slides');
-  const images = document.querySelectorAll('.slides img');
+  const slides = document.getElementById('slides');
+  const images = slides.querySelectorAll('img');
   const prev = document.querySelector('.prev');
   const next = document.querySelector('.next');
   let index = 0;
@@ -82,8 +85,8 @@
   }
 
   function showSlide(i) {
-    if(i < 0) index = 0;                 // Stop at first
-    else if(i >= images.length) index = images.length - 1; // Stop at last
+    if(i < 0) index = 0;
+    else if(i >= images.length) index = images.length - 1;
     else index = i;
     slides.style.transform = 'translateX(' + (-index * 100) + '%)';
     updateArrows();
@@ -94,6 +97,16 @@
 
   // Initialize arrows
   updateArrows();
+
+  // Touch swipe support
+  let startX = 0;
+  slides.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+  slides.addEventListener('touchmove', e => {
+    const moveX = e.touches[0].clientX;
+    const diff = startX - moveX;
+    if(diff > 50) { showSlide(index + 1); startX = moveX; }
+    else if(diff < -50) { showSlide(index - 1); startX = moveX; }
+  });
 </script>
 
 </body>
