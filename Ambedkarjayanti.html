@@ -3,98 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <title>Ambedkar Jayanti Gallery</title>
-  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #f8f9fa;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      color: #008080;
-      margin-bottom: 20px;
-    }
-    .gallery {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .gallery img {
-      width: 180px;
-      height: 130px;
-      object-fit: cover;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+    body { background:#f8f9fa; text-align:center; line-height:1.6; }
+    header { background:#008080; color:white; padding:20px 0; }
+    header h1 { font-size:2.5rem; margin-bottom:5px; }
+    header p { font-size:1.2rem; font-weight:300; }
+    nav { background:#006666; padding:10px; }
+    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:500; }
+    nav a:hover { text-decoration:underline; }
+
+    .intro { max-width:800px; margin:20px auto; padding:0 20px; text-align:justify; color:#333; }
+    .carousel { position:relative; max-width:700px; margin:30px auto; overflow:hidden; border-radius:10px; }
+    .slides { display:flex; transition:transform 0.5s ease-in-out; }
+    .slides img { width:100%; flex-shrink:0; border-radius:10px; }
+    .arrow { position:absolute; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.5); color:white; border:none; font-size:2rem; padding:10px; cursor:pointer; border-radius:50%; transition:background 0.2s; }
+    .arrow:hover:not(.disabled) { background:rgba(0,0,0,0.8); }
+    .prev { left:10px; }
+    .next { right:10px; }
+    .disabled { opacity:0.3; cursor:not-allowed; }
+
+    footer { background:#008080; color:white; text-align:center; padding:15px; margin-top:30px; }
+    footer a { color:white; text-decoration:underline; }
   </style>
 </head>
 <body>
 
-<h1>Ambedkar Jayanti Gallery</h1>
+<header>
+  <h1>Khidmat Foundation</h1>
+  <p>Serving Humanity with Compassion</p>
+</header>
 
-<div class="gallery">
-  <a href="images/ambedkar1.jpg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar1.jpg" alt="Ambedkar Jayanti Image 1" />
-  </a>
-  <a href="images/ambedkar2.jpg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar2.jpg" alt="Ambedkar Jayanti Image 2" />
-  </a>
-  <a href="images/ambedkar3.jpg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar3.jpg" alt="Ambedkar Jayanti Image 3" />
-  </a>
-  <a href="images/ambedkar4.jpg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar4.jpg" alt="Ambedkar Jayanti Image 4" />
-  </a>
-  <a href="images/ambedkar5.jpg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar5.jpg" alt="Ambedkar Jayanti Image 5" />
-  </a>
-  <a href="images/ambedkar6.jpg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar6.jpg" alt="Ambedkar Jayanti Image 6" />
-  </a>
-  <a href="images/ambedkar7.jpeg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar7.jpeg" alt="Ambedkar Jayanti Image 6" />
-  </a>
-  <a href="images/ambedkar8.jpeg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar8.jpeg" alt="Ambedkar Jayanti Image 6" />
-  </a>
-  <a href="images/ambedkar8.jpeg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar8.jpeg" alt="Ambedkar Jayanti Image 6" />
-  </a>
-  <a href="images/ambedkar9.jpeg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar9.jpeg" alt="Ambedkar Jayanti Image 6" />
-  </a>
-  <a href="images/ambedkar10.jpeg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar10.jpeg" alt="Ambedkar Jayanti Image 6" />
-  </a>
-  <a href="images/ambedkar11.jpeg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar11.jpeg" alt="Ambedkar Jayanti Image 6" />
-  </a>
-  <a href="images/ambedkar12.jpeg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar12.jpeg" alt="Ambedkar Jayanti Image 6" />
-  </a>
-  <a href="images/ambedkar13.jpeg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar13.jpeg" alt="Ambedkar Jayanti Image 6" />
-  </a>
-  <a href="images/ambedkar14.jpeg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar14.jpeg" alt="Ambedkar Jayanti Image 6" />
-  </a>
-  <a href="images/ambedkar15.jpeg" class="glightbox" data-gallery="ambedkar">
-    <img src="images/ambedkar15.jpeg" alt="Ambedkar Jayanti Image 6" />
-  </a>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="index.html#about">About Us</a>
+  <a href="index.html#work">Our Work</a>
+  <a href="index.html#contact">Contact</a>
+</nav>
 
-
-  <!-- Add more images by copying above line and changing file names -->
+<div class="intro">
+  <h2>Ambedkar Jayanti Gallery</h2>
+  <p>
+    Dr. Bhimrao Ramji Ambedkar, fondly known as Bada Saheb Ambedkar, was a visionary social reformer and the principal architect of the Indian Constitution. He dedicated his life to fighting social discrimination, promoting equality, and empowering marginalized communities. His ideas on education, social justice, and human rights continue to inspire millions.
+  </p>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<!-- Carousel -->
+<div class="carousel">
+  <div class="slides">
+    <img src="images/ambedkar1.jpg" alt="Ambedkar Celebration 1">
+    <img src="images/ambedkar2.jpg" alt="Ambedkar Celebration 2">
+    <img src="images/ambedkar3.jpg" alt="Ambedkar Celebration 3">
+    <img src="images/ambedkar4.jpg" alt="Ambedkar Celebration 4">
+    <img src="images/ambedkar5.jpg" alt="Ambedkar Celebration 5">
+    <img src="images/ambedkar6.jpg" alt="Ambedkar Celebration 6">
+  </div>
+  <button class="arrow prev disabled">&#10094;</button>
+  <button class="arrow next">&#10095;</button>
+</div>
+
+<footer>
+  <p>Facebook: <a href="https://www.facebook.com/share/14GAffdVtAL/" target="_blank">Visit our Facebook Page</a></p>
+  <p>Phone: +91 9860171818</p>
+  <p>© 2025 Khidmat Foundation | All Rights Reserved</p>
+</footer>
+
 <script>
-  const lightbox = GLightbox({ selector: '.glightbox' });
+  const slides = document.querySelector('.slides');
+  const images = document.querySelectorAll('.slides img');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+  let index = 0;
+
+  function updateArrows() {
+    prev.classList.toggle('disabled', index === 0);
+    next.classList.toggle('disabled', index === images.length - 1);
+  }
+
+  function showSlide(i) {
+    if(i < 0) index = 0;                 // Stop at first
+    else if(i >= images.length) index = images.length - 1; // Stop at last
+    else index = i;
+    slides.style.transform = 'translateX(' + (-index * 100) + '%)';
+    updateArrows();
+  }
+
+  prev.addEventListener('click', () => showSlide(index - 1));
+  next.addEventListener('click', () => showSlide(index + 1));
+
+  // Initialize arrows
+  updateArrows();
 </script>
 
 </body>
