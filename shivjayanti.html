@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shiv Jayanti Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #008080;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 180px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<h1>Shiv Jayanti Gallery</h1>
+
+<div class="gallery">
+  <a href="images/shiv1.jpg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv1.jpg" alt="Shiv Jayanti Image" />
+  </a>
+  <a href="images/shiv2.jpg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv2.jpg" alt="Shiv Jayanti Image" />
+  </a>
+  <a href="images/shiv3.jpg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv3.jpg" alt="Shiv Jayanti Image" />
+  </a>
+  <a href="images/shiv4.jpg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv4.jpg" alt="Shiv Jayanti Image" />
+  </a>
+  <a href="images/shiv5.jpg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv5.jpg" alt="Shiv Jayanti Image" />
+  </a>
+   <a href="images/shiv6.jpg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv6.jpg" alt="Shiv Jayanti Image" />
+  </a>
+   <a href="images/shiv7.jpg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv7.jpg" alt="Shiv Jayanti Image" />
+  </a>
+   <a href="images/shiv8.jpg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv8.jpg" alt="Shiv Jayanti Image" />
+  </a>
+   <a href="images/shiv9.jpeg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv9.jpeg" alt="Shiv Jayanti Image" />
+  </a>
+   <a href="images/shiv10.jpeg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv10.jpeg" alt="Shiv Jayanti Image" />
+  </a>
+   <a href="images/shiv11.jpeg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv11.jpeg" alt="Shiv Jayanti Image" />
+  </a>
+   <a href="images/shiv12.jpeg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv12.jpeg" alt="Shiv Jayanti Image" />
+  </a>
+   <a href="images/shiv13.jpeg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv13.jpeg" alt="Shiv Jayanti Image" />
+  </a>
+   <a href="images/shiv14.jpeg" class="glightbox" data-gallery="shivjayanti">
+    <img src="images/shiv14.jpeg" alt="Shiv Jayanti Image" />
+  </a>
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+
+</body>
+</html>

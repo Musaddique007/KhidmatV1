@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Food Distribution Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #008080;
+      margin-bottom: 20px;
+
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 180px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+<h1>Food Distribution Gallery</h1>
+<img src="food.jpg" alt="Food">
+
+<div class="gallery">
+    <a href="images/footevent1.jpg" class="glightbox" data-gallery="Food">
+    <img src="images/footevent1.jpg" alt="Image 1" />
+  </a>
+ <a href="images/foodevent2.jpg" class="glightbox" data-gallery="Food">
+    <img src="images/footevent2.jpg" alt="Image 1" />
+  </a>
+  <a href="images/footevent3.jpg" class="glightbox" data-gallery="Food">
+    <img src="images/footevent3.jpg" alt="Image 1" />
+  </a>
+  <a href="images/footevent4.jpg" class="glightbox" data-gallery="Food">
+    <img src="images/footevent4.jpg" alt="Image 1" />
+  </a>
+  <a href="images/footevent5.jpg" class="glightbox" data-gallery="Food">
+    <img src="images/footevent5.jpg" alt="Image 1" />
+  </a>
+  <a href="images/footevent6.jpg" class="glightbox" data-gallery="Food">
+    <img src="images/footevent6.jpg" alt="Image 1" />
+  </a>
+  <a href="images/footevent7.jpg" class="glightbox" data-gallery="Food">
+    <img src="images/footevent7.jpg" alt="Image 1" />
+  </a>
+  <a href="images/footevent8.jpg" class="glightbox" data-gallery="Food">
+    <img src="images/footevent8.jpg" alt="Image 1" />
+  </a>
+  <a href="images/footevent9.jpg" class="glightbox" data-gallery="Food">
+    <img src="images/footevent9.jpg" alt="Image 1" />
+  </a>
+  <a href="images/footevent10.jpg" class="glightbox" data-gallery="Food1">
+    <img src="images/footevent10.jpg" alt="Image 1" />
+  </a>
+  <a href="images/footevent11.jpg" class="glightbox" data-gallery="Food1">
+    <img src="images/footevent11.jpg" alt="Image 1" />
+  </a>
+  <a href="images/EM1.jpeg" class="glightbox" data-gallery="Food1">
+    <img src="images/EM1.jpeg" alt="Image 1" />
+  </a>
+  <a href="images/EM2.jpeg" class="glightbox" data-gallery="Food1">
+    <img src="images/EM2.jpeg" alt="Image 1" />
+  </a>
+  <a href="images/EM3.jpeg" class="glightbox" data-gallery="Food1">
+    <img src="images/EM3.jpeg" alt="Image 1" />
+  </a>
+  <a href="images/EM4.jpeg" class="glightbox" data-gallery="Food1">
+    <img src="images/EM4.jpeg" alt="Image 1" />
+  </a>
+  <a href="images/EM5.jpeg" class="glightbox" data-gallery="Food1">
+    <img src="images/EM5.jpeg" alt="Image 1" />
+  </a>
+  <a href="images/EM6.jpeg" class="glightbox" data-gallery="Food1">
+    <img src="images/EM6.jpeg" alt="Image 1" />
+  </a>
+  <a href="images/EM7.jpeg" class="glightbox" data-gallery="Food1">
+    <img src="images/EM7.jpeg" alt="Image 1" />
+  </a>
+
+  
+  <!-- Add more images here, always keep same data-gallery="food-distribution" -->
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({
+    selector: '.glightbox'
+  });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
